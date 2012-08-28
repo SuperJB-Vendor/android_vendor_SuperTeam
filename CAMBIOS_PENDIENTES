@@ -1,0 +1,30 @@
+1.- mods/terminales/<device>/data/configsup.cf
+	- Los parametros por defecto pueden estar en /system/data/sup.config
+	- Establecidos en el propio device y no en en el vendor porque es algo especifico del terminal
+
+2.- Porque el updater-script tiene que estar pre-escrito?
+
+3.- Usar prebuild/<device>, prebuilt/common prebuilt/<plantilla_generica> para los archivos especificos en lugar de:
+	a) No hay carpeta para bootanimations
+	b) 2 lugares para apps
+		- mods/appgoogle...
+		- prebuilt/apps...
+	c) 2 lugares para common
+		- mods/common/....
+		- prebuilts/common
+	d) 2 lugares para terminales
+		- mods/terminales/<device>
+		- prebuilt/<device> NO SE USA
+	e) prebuilts/... para varias cosas
+
+	En resumen hay 7 lugares en lugar o mas, en lugar de 2 o poco mas
+		- prebuilt/bootanimation (el A anterior)
+		- prebuilt/common (el B, C y E anteriores)
+		- prebuilt/common_drm (divido en phone y tablet para lo no comun) y lo comun directamente
+		- <device> (el D y el E anteriores)
+
+	Principales problemas:
+		- Hay que usar mas el common siempre que sea posible para no duplicar archivos en balde
+		- Hay que usar mas el device/<manufacturer>/<device> para cosas mas especificas
+
+4.- Tools revisar opticharger y squisher para JB

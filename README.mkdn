@@ -1,0 +1,53 @@
+SuperTeam - Open Source ROM
+http://www.superteam.es
+=========================
+
+
+Getting Started
+---------------
+
+Please see the [Android source page](http://source.android.com/source/index.html) for building instructions.
+
+To initialize your local repository using my trees, use the following command:
+
+    repo init -u https://github.com/SuperTeam/android.git -b jb
+
+Then to sync up:
+
+    repo sync
+
+This will sync everything and use the correct "-j#" flag.
+
+
+Building
+--------
+
+After the sync is finished, please read the [instructions from the Android site](http://s.android.com/source/building.html) on how to build.
+
+Once you've read that, you can build with
+
+    mka
+
+This will compile everything and use the correct "-j#" flag.
+
+You can also build a flashable zip with
+
+    mka bacon
+    
+    
+Special Thanks
+--------------
+
+Huge shout out to [@peteralfonzo](http://twitter.com/peteralfonso) for his wonderfully clean vendor tree to use as a base. This makes this infinitely more oragnized and easier to work with. Thank him!
+
+
+Organization files
+------------------
+- boot: A pseudo Buildbot
+- config: Config .mk files
+- overlay: Common, per dpi and per device overlay. Use it from most generic to most specific!
+- prebuilt: Common, nad per device prebuilt files. As possible use prebuild on device/<manufacturer>/<device> specific folder.
+- products: Device specific products
+- tools: Some useful tools
+
+For more information on this Github Organization and how it is structured, please read the wiki article http://movilzona.es/wiki/index.php/DevGit

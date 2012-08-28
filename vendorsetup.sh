@@ -1,0 +1,13 @@
+add_lunch_combo osr_maguro-userdebug
+add_lunch_combo osr_toro-userdebug
+add_lunch_combo osr_toroplus-userdebug
+add_lunch_combo osr_grouper-userdebug
+add_lunch_combo osr_crespo-userdebug
+add_lunch_combo osr_crespo4g-userdebug
+add_lunch_combo osr_d2tmo-userdebug
+add_lunch_combo osr_hercules-userdebug
+add_lunch_combo osr_n7000-userdebug
+add_lunch_combo osr_p3113-userdebug
+add_lunch_combo osr_p5113-userdebug
+add_lunch_combo osr_stingray-userdebug
+add_lunch_combo osr_wingray-userdebug
